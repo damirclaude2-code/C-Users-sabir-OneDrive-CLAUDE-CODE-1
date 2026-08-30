@@ -125,12 +125,14 @@
 
 ## Skill Pack
 
-В проекте установлен локальный skill pack (урок 4.4):
+В проекте установлен локальный skill pack — 6 навыков из уроков 4.2-4.4:
 
-- `copywriter`
-- `designer`
-- `design-elements-pack`
-- `skill-router`
+- `auto-prompt-upgrade` (урок 4.2) — усиление сырой постановки задачи
+- `search-and-read-web` (урок 4.3) — поиск и чтение сайтов (Tavily + Firecrawl)
+- `copywriter` (урок 4.4) — прикладные тексты
+- `designer` (урок 4.4) — улучшение существующей визуальной подачи
+- `design-elements-pack` (урок 4.4) — сборка структуры из готовых блоков + локальная библиотека `references/`/`templates/`
+- `skill-router` (урок 4.4) — автовыбор минимального уместного маршрута
 
 ⚠ **`fact-checking` НЕ установлен.** Source-of-truth файл
 `06-fact-checking-skill-4-4.md` не был передан при установке — без него

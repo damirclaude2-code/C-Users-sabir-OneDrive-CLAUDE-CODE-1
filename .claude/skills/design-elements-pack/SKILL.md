@@ -105,7 +105,7 @@ allowed-tools: [Read, Write, Edit]
 
 - изобретать структуру заново, когда в `templates/` уже есть готовый skeleton;
 - собирать comparison page как "спор ради спора" вместо помощи в выборе
-  (см. `references/comparison-page-skeleton.md`);
+  (см. `templates/comparison-page-skeleton.md`);
 - вставлять pricing/FAQ-логику в слайд, где нужен один тезис
   (см. `references/presentation-rules.md`);
 - делать 5 одинаково важных блоков подряд;
