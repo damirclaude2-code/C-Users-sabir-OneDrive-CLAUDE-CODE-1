@@ -1,0 +1,10 @@
+node_modules/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+dist/
+build/
+
+# секреты и приватные доступы — никогда не публикуем
+credentials.md
