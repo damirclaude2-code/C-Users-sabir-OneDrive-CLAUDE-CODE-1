@@ -5,6 +5,21 @@ __pycache__/
 .DS_Store
 dist/
 build/
+.astro/
+.next/
 
 # секреты и приватные доступы — никогда не публикуем
 credentials.md
+credentials.local.md
+.env.*
+!.env.example
+secrets/
+*.key
+*.pem
+
+# Логи
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
