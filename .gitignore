@@ -23,3 +23,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# резервные копии, которые оставляют установщики (например hwai-mcp-stack)
+*.bak
+*.bak.*

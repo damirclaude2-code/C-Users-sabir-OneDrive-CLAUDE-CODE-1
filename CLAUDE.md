@@ -303,3 +303,39 @@ prompt, skill, MCP, router или агентное поведение, снач�
 - `git push` не выполняется без явного запроса пользователя.
 - Массовый откат не выполняется без явного подтверждения пользователя.
 <!-- LOCAL-GIT-WORKFLOW-END -->
+
+<!-- BEGIN HUMANSWITHAI_MCP_AUTOPILOT -->
+## HWAI Context Router Autopilot
+
+Product: Token Efficiency Platform for Agentic IDEs.
+Technical core: HWAI Context Router.
+Installed MCP profile: `core`.
+Configured clients: claude.
+Available MCP services: `router-lite-mcp`, `mcp-token-router`, `retrieval-mcp`, `context-prep-mcp`, `static-analysis-mcp`, `repo-history-mcp`, `repo-quality-gate-mcp`.
+
+Use HWAI Context Router as the local-first prep layer when the user's natural wording asks for repo context, log compaction, browser traces, screenshots, dependency/schema checks, or documentation hygiene. The user does not need to type MCP names.
+
+Core behavior:
+
+- Prefer MCP prep before spending large frontier-model context on noisy logs, traces, screenshots, or repo-wide search.
+- Skip MCP prep for tiny conceptual answers or exact-file edits where the relevant file is already obvious.
+- Always read exact files before editing. MCP retrieval narrows context; it does not replace source inspection.
+- Keep frontier reasoning for ambiguous, high-risk, architecture-heavy, security-sensitive, or final-output-sensitive decisions.
+- Never send raw code, secrets, env files, lockfiles, screenshots, traces, private docs, or raw prompts to external services.
+
+Natural trigger vocabulary:
+
+| User wording, not commands | Agent should consider |
+| --- | --- |
+| "where is this implemented", "найди где живет", "что менять", "before editing find context" | `retrieval-mcp`, `language-graph-mcp`, `repo-history-mcp` |
+| "huge log", "CI output", "stack trace", "summarize this long spec", "длинные логи" | `context-prep-mcp` |
+| "compress this context", "сожми контекст", "preserve evidence", "too much tool output" | `context-prep-mcp` via context compression |
+| "is this safe to merge", "quality gate", "static check", "перед PR проверь" | `static-analysis-mcp`, `repo-quality-gate-mcp` |
+| "repo is growing", "find stale docs", "cleanup docs", "мусор в репо" | `repo-hygiene-mcp`, `docs-hygiene-mcp`, `docs-sync-mcp` |
+| "release blocker", "missing LICENSE", "generated dist committed", "public repo hygiene" | `repo-hygiene-mcp`, `repo-quality-gate-mcp` |
+| "API/schema changed", "contract drift", "dependency risk", "lockfile risk" | `contract-schema-mcp`, `dependency-risk-mcp` |
+| "Playwright trace", "trace.zip", "HAR", "why did this browser test fail" | `playwright-trace-mcp`, `agent-trace-mcp` |
+| "screenshot", "visual diff", "compare UI", "скриншот", "визуально проверь" | `visual-baseline-mcp` |
+
+More detail: `docs/humanswithai-mcp-stack.md`.
+<!-- END HUMANSWITHAI_MCP_AUTOPILOT -->
