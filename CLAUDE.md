@@ -309,9 +309,9 @@ prompt, skill, MCP, router или агентное поведение, снач�
 
 Product: Token Efficiency Platform for Agentic IDEs.
 Technical core: HWAI Context Router.
-Installed MCP profile: `core`.
+Installed MCP profile: `full`.
 Configured clients: claude.
-Available MCP services: `router-lite-mcp`, `mcp-token-router`, `retrieval-mcp`, `context-prep-mcp`, `static-analysis-mcp`, `repo-history-mcp`, `repo-quality-gate-mcp`.
+Available MCP services: `router-lite-mcp`, `mcp-token-router`, `retrieval-mcp`, `context-prep-mcp`, `static-analysis-mcp`, `repo-history-mcp`, `repo-quality-gate-mcp`, `language-graph-mcp`, `repo-hygiene-mcp`, `docs-hygiene-mcp`, `contract-schema-mcp`, `dependency-risk-mcp`, `docs-sync-mcp`, `golden-dataset-mcp`, `agent-trace-mcp`, `test-results-mcp`, `tdd-gate-mcp`, `pbt-runner-mcp`, `playwright-trace-mcp`, `visual-baseline-mcp`.
 
 Use HWAI Context Router as the local-first prep layer when the user's natural wording asks for repo context, log compaction, browser traces, screenshots, dependency/schema checks, or documentation hygiene. The user does not need to type MCP names.
 
