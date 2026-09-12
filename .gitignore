@@ -27,3 +27,12 @@ pnpm-debug.log*
 # резервные копии, которые оставляют установщики (например hwai-mcp-stack)
 *.bak
 *.bak.*
+
+# proof loop — временные рабочие доказательства, не постоянная документация
+.agent/tasks/
+
+# overnight task queue — рабочие логи и статус запуска, не постоянная документация
+.claude/queue/logs/
+.claude/queue/status.json
+.claude/queue/current-task.md
+.claude/queue/evidence/
