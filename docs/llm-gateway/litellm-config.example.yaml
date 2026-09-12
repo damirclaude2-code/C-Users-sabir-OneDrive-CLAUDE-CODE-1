@@ -1,0 +1,29 @@
+# Пример конфига LiteLLM Proxy для SIMPLE gateway.
+# Это ПРИМЕР, не production SLA — перед реальным использованием свериться
+# с официальной документацией LiteLLM и подставить реальные значения через env.
+#
+# Ни master key, ни provider-ключи здесь не хранятся — только имена
+# переменных окружения. Реальные значения — в credentials.md и в .env
+# (см. local-env.example рядом с этим файлом).
+
+model_list:
+  - model_name: simple-fast
+    litellm_params:
+      model: gemini/gemini-2.5-flash
+      api_key: os.environ/GEMINI_API_KEY
+
+  - model_name: simple-json
+    litellm_params:
+      model: groq/llama-3.3-70b-versatile
+      api_key: os.environ/GROQ_API_KEY
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+
+router_settings:
+  routing_strategy: simple-shuffle
+  num_retries: 3
+  timeout: 30
+  cooldown_time: 60
+  fallbacks:
+    - simple-fast: ["simple-json"]

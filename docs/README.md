@@ -14,6 +14,7 @@
 | Как работать с локальным Git (русский словарь команд) | [`local-git-workflow.md`](local-git-workflow.md) |
 | Секреты и API-ключи | [`credentials.md`](../credentials.md) в корне (защищён `.gitignore`, не в этой папке нарочно — секреты живут отдельно от обычной документации) |
 | Инструкции по запуску/деплою/проверке | Пока отдельного файла нет — проект не является кодовой базой с build/deploy шагами. Если появится код с командами запуска, добавить сюда `docs/runbook.md` |
+| План LLM Gateway (SIMPLE — Gemini/Groq, COMPLEX — Claude/Codex CLI) | [`docs/llm-gateway/README.md`](llm-gateway/README.md) |
 
 ## Главное правило этой системы документации
 

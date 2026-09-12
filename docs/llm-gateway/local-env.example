@@ -1,0 +1,8 @@
+# Пример .env для LLM Gateway. Скопируй в .env и заполни реальными значениями —
+# .env уже в .gitignore, в git не попадёт.
+
+GEMINI_API_KEY=
+GROQ_API_KEY=
+LITELLM_MASTER_KEY=
+CLI_GATEWAY_TOKEN=
+CLI_GATEWAY_BASE_URL=http://127.0.0.1:3100/v1
