@@ -1,50 +1,49 @@
 # Design Elements Pack
 
-Локальная design library для сборки структуры новых экранов, лендингов и
-слайдов из готовых сильных паттернов. После установки — default visual
-baseline проекта (можно отключить явным запросом, см.
-`references/style-override-policy.md`).
+Installable pack для сильной структуры страниц, экранов и слайдов.
 
-## Структура пакета
+Этот pack нужен не для красивых слов про дизайн, а для того, чтобы Claude Code
+мог:
 
-```text
-design-elements-pack/
-├── SKILL.md
-├── README.md
-├── references/
-│   ├── pattern-catalog.md        — 14 сильных блоков и когда они нужны
-│   ├── pattern-selection.md      — как выбрать маршрут по типу артефакта
-│   ├── presentation-rules.md     — правила для слайдов (не мини-лендинг)
-│   ├── visual-rules.md           — визуальный baseline, anti-slop
-│   ├── style-override-policy.md  — когда уважать другой стиль пользователя
-│   ├── open-source-stack.md      — бесплатный веб-стек (Tailwind/shadcn/daisyUI/HyperUI)
-│   └── sources-and-licenses.md   — источники и лицензии pack-а
-└── templates/
-    ├── pricing-page-skeleton.md
-    ├── comparison-page-skeleton.md
-    └── presentation-lesson-slide-skeleton.md
-```
+- быстро выбрать подходящие блоки;
+- не начинать каждый раз с пустого листа;
+- опираться на бесплатные open-source паттерны;
+- держать более взрослый visual baseline.
 
-## Подходит для
+После установки pack считается default visual baseline, если пользователь явно
+не попросил другой стиль.
 
-- нового лендинга (cold/warm);
-- pricing-страницы;
-- comparison-страницы;
-- обучающего или продающего слайда с нуля;
-- любой ситуации "с чего начать структуру".
+## Что внутри
 
-## Когда НЕ это
+- `SKILL.md` — логика навыка;
+- `references/` — каталог паттернов, visual rules, open-source baseline;
+- `templates/` — готовые skeletons для web и presentation задач.
 
-Если экран/слайд уже существует и его нужно улучшить — используй `designer`,
-не этот навык.
+## Когда особенно полезен
 
-## Примеры вызова
+- новый лендинг;
+- новый продающий слайд;
+- учебный слайд;
+- comparison page;
+- pricing page;
+- структура экрана с нуля.
+
+## Как отключить baseline в конкретной задаче
+
+Можно сказать:
 
 ```text
-Собери pricing-страницу для нашего продукта с помощью design-elements-pack.
+Не используй загруженный дизайн-стиль, подбери другое направление.
 ```
 
+или:
+
 ```text
-Нужен слайд-объяснение для урока — используй presentation skeleton из
-design-elements-pack.
+Не опирайся на shadcn/daisyUI, используй мой референс.
 ```
+
+## Когда это не лучший первый выбор
+
+- если экран уже есть и его надо улучшать;
+- если задача в первую очередь про тексты;
+- если сначала нужно проверить факты.
