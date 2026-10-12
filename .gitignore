@@ -36,3 +36,6 @@ pnpm-debug.log*
 .claude/queue/status.json
 .claude/queue/current-task.md
 .claude/queue/evidence/
+
+# личные материалы — репозиторий публичный, поэтому в git не попадают
+Личное/
